@@ -48,12 +48,11 @@ export class ButcherShop extends React.Component {
         {},
         "Hello! We have the following products for sale today:"
       ),
-      React.createElement("ul", {}, [
-        React.createElement("li", {}, "Tenderloin"),
-        React.createElement("li", {}, "Short ribs"),
-        React.createElement("li", {}, "Beef shin"),
-        React.createElement("li", {}, "Ribeye")
-      ])
+      React.createElement(
+        "ul",
+        {},
+        BUTCHER_PRODUCTS.map(prod => React.createElement("li", {}, prod))
+      )
     );
   }
 }
